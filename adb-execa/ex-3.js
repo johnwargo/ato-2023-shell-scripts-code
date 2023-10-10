@@ -2,4 +2,4 @@ import {$} from 'execa';
 
 const msg='Hello world!';
 
-await $({stdio: 'inherit'})`echo ${msg}`;
+await $({stdout: 'inherit'})`echo ${msg}`;

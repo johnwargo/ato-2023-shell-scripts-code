@@ -1,4 +1,9 @@
-#!/usr/bin/env zx
+import {$} from 'execa';
+import chalk from 'chalk';
+import parseArgs from 'minimist';
+
+const $$ = $({stdio: 'inherit'});
+var argv = parseArgs(process.argv.slice(2));
 
 const accessToken = 'YOUR_ACCESS_TOKEN';
 const deviceID = 'YOUR_DEVICE_ID';
@@ -13,10 +18,9 @@ if (!argv.a && !argv.d) {
 
 var theCode = argv.a ? accessToken : deviceID;
 try {
-  await $`adb shell input text ${theCode}`
-} catch (p) {
-  console.log(`\nExit code: ${p.exitCode}\n`);
-  console.log(chalk.red(p.stderr));
+  await $$`adb shell input text ${theCode}`
+} catch (error) {
+  console.error(error);  
   process.exit(1);
 }
 console.log('Task completed');
