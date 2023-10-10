@@ -1,6 +1,6 @@
 import {$} from 'execa';
 
-const $$ = $({stdio: 'inherit'});
+const $$ = $({stdout: 'inherit'});
 
 const accessToken = 'YOUR_ACCESS_TOKEN';
 
