@@ -2,6 +2,6 @@ import {$} from 'execa';
 
 const $$ = $({stdout: 'inherit'});
 
-const accessToken = 'YOUR_ACCESS_TOKEN';
+const accessToken = 'token439';
 
 await $$`adb shell input text ${accessToken}`

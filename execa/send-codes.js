@@ -5,8 +5,8 @@ import parseArgs from 'minimist';
 const $$ = $({stdio: 'inherit'});
 var argv = parseArgs(process.argv.slice(2));
 
-const accessToken = 'YOUR_ACCESS_TOKEN';
-const deviceID = 'YOUR_DEVICE_ID';
+const accessToken = 'ACCESS_TOKEN';
+const deviceID = 'DEVICE_ID';
 
 // zx includes minimist, so we can use argv
 // https://www.npmjs.com/package/minimist
