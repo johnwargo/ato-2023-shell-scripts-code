@@ -1,6 +1,6 @@
-import {execa} from 'execa';
+import {$} from 'execa';
 
-const msg='Hello world!';
+const msg=['Hello', 'John', '&', 'ATO.'];
 
-const {stdout} = await execa(`echo ${msg}`);
+const {stdout} = await $`echo ${msg}`;
 console.log(stdout);
